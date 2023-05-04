@@ -1,5 +1,12 @@
 .navigation{
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
-
+.cover img{
+  border-radius: 50%;
+  height: 200px;
+  width:200px;
+}
+.cover h2{
+  text-decoration: none;
+}

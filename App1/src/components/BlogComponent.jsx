@@ -78,16 +78,18 @@ export const blogPosts = [
     title: "The Importance of Self-Reflection: How to Grow and Evolve",
     description:
       "In this post, I'll be discussing the importance of self-reflection and how to grow and evolve. From journaling to seeking feedback, I'll be sharing practical tips and techniques to help you cultivate a more introspective and self-aware way",
+    date: "2020-01-01",
+    image: "https://picsum.photos/id/100/200/300",
   },
 ]; 
 
 export const DisplayBlog = ({ id, title, description, date, image }) => {
   return (
     <Link to={`/blogs/${id}`} className="cover">
-      <img src={image} alt={title} />
       <h1>{title}</h1>
-      <p>{description}</p>
-      <p>{date}</p>
+      <p >{description}</p>
+      <img src={image} alt={title} />
+      <p >{date}</p>
     </Link>
   );
 };
@@ -99,7 +101,11 @@ export const BlogComponent = () => {
       {!id ? (
         <>
           <div className="blog-posts">
-            {blogPosts.map((blog) => DisplayBlog(blog))}
+            {blogPosts.map((blog) => (
+              <div key={blog.id}>
+                {DisplayBlog({ ...blog, key: blog.id })}
+              </div>
+            ))}
           </div>
         </>
       ) : (
