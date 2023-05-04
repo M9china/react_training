@@ -2,7 +2,7 @@ import { MyComponent,BlogComponent,OneBlogComponent,NavigationComponent, DataCol
 import { Route, Routes } from "react-router-dom"
 export const BlogRouting = () => {
     const data = {
-        title: " My Blog",
+        title: " My Personal Blog",
         description: "My Blog Post",
     }
     return(
@@ -10,10 +10,9 @@ export const BlogRouting = () => {
         <NavigationComponent/>
         <Routes>
          <Route path="/" element={<MyComponent title={data.title}/>} />
-         <Route path="/blogs" element={<BlogComponent/>} >
+         <Route path="/blogs" element={<BlogComponent/>} />
          <Route path=":id" element={<OneBlogComponent/>}/>
-         <Route path="account" element={<DataCollector/>} />
-         </Route>
+         <Route path="/account" element={<DataCollector/>} />
         </Routes>
        </>
     )

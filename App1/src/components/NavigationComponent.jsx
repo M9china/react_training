@@ -5,7 +5,7 @@ export const NavigationComponent = () => {
         <nav className="navBar">
             <NavLink className={'navigation'}to='/'>Home</NavLink>
             <NavLink className={'navigation'}to='/blogs'>Blogs</NavLink>
-            <NavLink className={'navigation'}to='account'>Create free account</NavLink>
+            <NavLink className={'navigation'}to='/account'>Create free account</NavLink>
         </nav>
         </>
     </>

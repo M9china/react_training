@@ -1,12 +1,29 @@
 .navigation{
   margin-right: 15px;
   margin-bottom: 5px;
+  font-size: 20px;
+  padding-left: 15px;
+  text-decoration: none;
 }
 .cover img{
   border-radius: 50%;
   height: 200px;
   width:200px;
 }
-.cover h2{
+.cover{
   text-decoration: none;
+}
+.navBar{
+  height:40px;
+  background-color: rgba(128, 0, 128, 0.089);
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+input{
+  height: 25px;
+  margin-bottom: 5px;
+}
+.userInfo{
+  display: flex; 
+  /* background-color: rgba(128, 128, 128, 0.514); */
 }
