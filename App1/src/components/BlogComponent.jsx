@@ -2,95 +2,57 @@ import { Link, Outlet, useParams } from "react-router-dom";
 export const blogPosts = [
   {
     id: 1,
-    title: "Welcome to My First Blog: A Journey of Self-Discovery",
+    title: "Getting Started in Software Engineering",
     description:
-      "In this blog, I'll be sharing my personal experiences and insights on life, love, and everything in between. Join me on this journey of self-discovery as we explore the depths of the human psyche and uncover the secrets to living a fulfilling life.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
+      "In this post, we discuss the skills and qualifications needed to pursue a career in software engineering.",
+    date: "2023-05-05",
+    image: "https://i.pinimg.com/564x/90/c1/ca/90c1ca3f7cd58fb3e04422542b40a2a4.jpg",
   },
   {
     id: 2,
-    title: "The Power of Positive Thinking: How to Transform Your Life",
+    title: "The Day-to-Day Life of a Software Engineer",
     description:
-      "In this post, I'll be discussing the power of positive thinking and how it can transform your life. From changing your mindset to practicing gratitude, I'll be sharing practical tips and techniques to help you cultivate a more positive outlook on life.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
+      "In this post, we describe a typical day in the life of a software engineer and discuss the various tasks and responsibilities involved.",
+    date: "2023-05-05",
+    image: "https://i.pinimg.com/564x/8f/23/c5/8f23c5fc86be8bf1fe71751221012eed.jpg",
   },
   {
     id: 3,
-    title: "The Art of Mindfulness: Finding Peace in a Busy World",
+    title: "Challenges and Opportunities in Software Engineering",
     description:
-      "In this post, I'll be exploring the art of mindfulness and how it can help you find peace in a busy world. From meditation to breathing exercises, I'll be sharing practical techniques to help you cultivate a more mindful and present way of living.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
+      "In this post, we explore the various challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt.",
+    date: "2023-05-05",
+    image: "https://i.pinimg.com/564x/0f/61/11/0f611111edf1d3451a2f5f3e75849d09.jpg",
   },
   {
     id: 4,
-    title: "The Importance of Self-Care: How to Prioritize Your Well-Being",
+    title: "Advancing Your Career in Software Engineering",
     description:
-      "In this post, I'll be discussing the importance of self-care and how to prioritize your well-being. From setting boundaries to practicing self-compassion, I'll be sharing practical tips and techniques to help you take care of yourself both physically and mentally.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
+      "In this post, we offer tips and advice on how to advance your career as a software engineer, including the importance of networking, building a strong online presence, and continuously improving your skills and knowledge.",
+    date: "2023-05-05",
+    image: "https://i.pinimg.com/564x/dc/b9/cf/dcb9cf08a403633862c722660d03bfef.jpg",
   },
   {
     id: 5,
-    title: "The Power of Gratitude: How to Cultivate a Grateful Heart",
+    title: "Balancing Work and Life as a Software Engineer",
     description:
-      "In this post, I'll be exploring the power of gratitude and how it can transform your life. From keeping a gratitude journal to practicing random acts of kindness, I'll be sharing practical tips and techniques to help you cultivate a more grateful heart.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
-  },
-  {
-    id: 6,
-    title: "The Art of Forgiveness: How to Let Go of Resentment and Anger",
-    description:
-      "In this post, I'll be discussing the art of forgiveness and how to let go of resentment and anger. From practicing empathy to reframing your perspective, I'll be sharing practical tips and techniques to help you cultivate a more forgiving and compassionate mindset.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
-  },
-  {
-    id: 7,
-    title:
-      "The Importance of Connection: How to Build Meaningful Relationships",
-    description:
-      "In this post, I'll be discussing the importance of connection and how to build meaningful relationships. From practicing active listening to expressing vulnerability, I'll be sharing practical tips and techniques to help you cultivate deeper and more fulfilling connections with others.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
-  },
-  {
-    id: 8,
-    title: "The Power of Intention: How to Manifest Your Dreams",
-    description:
-      "In this post, I'll be exploring the power of intention and how to manifest your dreams. From setting clear goals to visualizing your desired outcome, I'll be sharing practical tips and techniques to help you harness the power of your thoughts and beliefs.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
-  },
-  {
-    id: 9,
-    title: "The Art of Letting Go: How to Release Attachments and Find Freedom",
-    description:
-      "In this post, I'll be discussing the art of letting go and how to release attachments and find freedom. From practicing acceptance to embracing impermanence, I'll be sharing practical tips and techniques to help you cultivate a more peaceful and liberated way of living.",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
-  },
-  {
-    id: 10,
-    title: "The Importance of Self-Reflection: How to Grow and Evolve",
-    description:
-      "In this post, I'll be discussing the importance of self-reflection and how to grow and evolve. From journaling to seeking feedback, I'll be sharing practical tips and techniques to help you cultivate a more introspective and self-aware way",
-    date: "2020-01-01",
-    image: "https://picsum.photos/id/100/200/300",
+      "In this post, we explore the challenges of maintaining a healthy work-life balance in the demanding field of software engineering and discuss strategies for managing stress and making time for self-care and hobbies.",
+    date: "2023-05-05",
+    image: "https://i.pinimg.com/564x/9a/df/69/9adf69928709f2ca1f5c211b113759ab.jpg",
   },
 ]; 
 
 export const DisplayBlog = ({ id, title, description, date, image }) => {
   return (
-    <Link to={`/blogs/${id}`} className="cover">
+    <div className="myCompCont">
+          <Link to={`/blogs/${id}`} className="cover">
       <h1>{title}</h1>
       <p >{description}</p>
       <img src={image} alt={title} />
       <p >{date}</p>
     </Link>
+    </div>
+
   );
 };
 
