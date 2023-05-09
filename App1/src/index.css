@@ -10,6 +10,7 @@
   border-radius: 35%;
   height: 200px;
   width:200px;
+  margin-left: 15px;
 }
 button{
   margin-bottom: 20px;
@@ -20,9 +21,9 @@ button{
 .footer{
   height:40px;
   /* background-color: rgba(128, 0, 128, 0.288); */
-  background-image: linear-gradient(  #232526
+  background-image: linear-gradient(#232526
   ,
-  #414345   ) ;
+  #414345);
   position: relative;
   width: 100%;
   padding-top: 20px;
@@ -33,13 +34,13 @@ button{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.userForm{
+/* .userForm{
   margin-left: 25%;
   margin-right: 25%;
   width: 50%;
   background-color:white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
+} */
 blockquote{
   font-size: 1.2em;
   padding: 0 0 0 6rem;
@@ -49,6 +50,7 @@ blockquote{
 }
 .aboutMe{
   column-count: 3;
+  row-gap: 50rem;
   text-align: justify;
   column-gap: 3.5rem;
 }
@@ -68,9 +70,9 @@ blockquote{
   font-family: Arial, Helvetica, sans-serif;
   color:black;
   font-size: 15px;
-  padding-left: 25%;
+  /* padding-left: 25%;
   margin-left: 15%;
-  margin-top: 20px;
+  margin-top: 20px; */
 
 }
 .userForm button{
@@ -79,7 +81,7 @@ blockquote{
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   color:black;
-  margin-left: 45%;
+  /* margin-left: 45%; */
 }
 .myCompCont p, .cover p,h1{
   font-size: 18px;

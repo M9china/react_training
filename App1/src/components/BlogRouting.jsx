@@ -1,4 +1,4 @@
-import { MyComponent,BlogComponent,OneBlogComponent,NavigationComponent, DataCollector } from ".";
+import { MyComponent,BlogComponent,OneBlogComponent,NavigationComponent, DataCollector, FooterComponent, AddBlogPost } from ".";
 import { Route, Routes } from "react-router-dom"
 export const BlogRouting = () => {
 
@@ -7,15 +7,13 @@ export const BlogRouting = () => {
         <NavigationComponent/>
         <Routes>
          <Route path="/" element={<MyComponent />} />
-         <Route path="/blogs" element={<BlogComponent/>} />
-         <Route path="/blogs/:id" element={<OneBlogComponent/>}/>
+         <Route path="/blogs" element={<BlogComponent/>} >
+         <Route path=":id" element={<OneBlogComponent/>}/>
+         </Route>
          <Route path="/account" element={<DataCollector/>} />
+         <Route path="/addBlog" element={<AddBlogPost/>} />
         </Routes>
-        <footer className="footer">
-          <a className="mediaPlatforms" href="https://github.com/M9china">GitHub</a>
-          <a className="mediaPlatforms" href="https://twitter.com/Nqobile60227239">Twitter</a>
-          <a className="mediaPlatforms" href="https://facebook.com">Facebook</a>
-      </footer>
+        <FooterComponent/>
 
        </>
     )

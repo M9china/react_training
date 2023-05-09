@@ -7,9 +7,19 @@ export const blogPosts = [
       "In this post, we discuss the skills and qualifications needed to pursue a career in software engineering.",
     date: "2023-05-05",
     image: "https://i.pinimg.com/564x/90/c1/ca/90c1ca3f7cd58fb3e04422542b40a2a4.jpg",
+    body: [
+      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
+      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
+      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+    ]
   },
   {
     id: 2,
+    body: [
+      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
+      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
+      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+    ],
     title: "The Day-to-Day Life of a Software Engineer",
     description:
       "In this post, we describe a typical day in the life of a software engineer and discuss the various tasks and responsibilities involved.",
@@ -18,6 +28,11 @@ export const blogPosts = [
   },
   {
     id: 3,
+    body: [
+      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
+      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
+      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+    ],
     title: "Challenges and Opportunities in Software Engineering",
     description:
       "In this post, we explore the various challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt.",
@@ -26,6 +41,11 @@ export const blogPosts = [
   },
   {
     id: 4,
+    body: [
+      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
+      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
+      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+    ],
     title: "Advancing Your Career in Software Engineering",
     description:
       "In this post, we offer tips and advice on how to advance your career as a software engineer, including the importance of networking, building a strong online presence, and continuously improving your skills and knowledge.",
@@ -34,6 +54,11 @@ export const blogPosts = [
   },
   {
     id: 5,
+    body: [
+      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
+      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
+      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+    ],
     title: "Balancing Work and Life as a Software Engineer",
     description:
       "In this post, we explore the challenges of maintaining a healthy work-life balance in the demanding field of software engineering and discuss strategies for managing stress and making time for self-care and hobbies.",
