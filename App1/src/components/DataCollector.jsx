@@ -16,7 +16,6 @@ export const DataCollector = () => {
     setUserDataList(prevList => [...prevList, userData]);
     localStorage.setItem('userDataList', JSON.stringify(userDataList));
     console.log(userDataList)
-    //alerting the user that the user that the form has been sent
     alert('Form submitted successfully');
     //clearing the user data input fields
     setName('');
