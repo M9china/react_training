@@ -61,23 +61,22 @@ export const blogPosts = [
 
 export const DisplayBlog = ({ id, title, description, date, image }) => {
   return (
-    <div>
-      <div className="flex flex-col">
-        <Link to={`/blogs/${id}`}>
-          <div className="mb-2">
-          <img className="h-32 w-32 place-content-center  flex-shrink-0" src={image} alt={title} />
-          </div>
-          <div>
-          <h1 className="text-xl justify-self-center">{title}</h1>
-          </div>
-          {/* <p>{description}</p>
-          <p>{date}</p> */}
 
-          
-
-        </Link>
-      </div>
+    <div className="flex flex-col mb-10">
+      <Link to={`/blogs/${id}`} className="flex">
+        <h1 className="text-xl flex flex-row-center">{title}</h1>
+        <img className="h-64 w-64 object-cover rounded-md" src={image} alt={title} />
+        <div className="border-l-2 border-r-2 border-t-2 border-b-2 ml-10 border-gray-300 h-64 pl-4 flex flex-col justify-between">
+          <p className="bg-gray-800 text-white px-2 py-1 text-sm self-end">{date}</p>
+          <div className="h-full flex-grow flex flex-col justify-between">
+            <div className="mt-2">
+              <p className="h-full">{description}</p>
+            </div>
+          </div>
+        </div>
+      </Link>
     </div>
+
   );
 };
 
@@ -87,7 +86,7 @@ export const BlogComponent = () => {
     <div>
       {!id ? (
         <>
-          <div className="flex flex-row items-center mr-4">
+          <div className="ml-4">
             {blogPosts.map((blog) => (
               <div key={blog.id} className=" mt-5 mb-5 w-30 h-84 mr-4">
                 {DisplayBlog({ ...blog, key: blog.id })}

@@ -23,31 +23,32 @@ export const AddBlogComponent = () => {
     console.log(postData);
   }
     return <>
-      < form onChange={handlChange} onSubmit={postBlog}>
-        <div>
-          <label htmlFor="title">
-            Blog title
-          </label>
-          <input type="text" id="title" name='title' placeholder='Title' />
+    <form className="flex flex-col space-y-4 p-6" onChange={handlChange} onSubmit={postBlog}>
+      <div className="flex flex-col">
+        <label htmlFor="title" className="mb-2 font-bold text-gray-700">
+          Blog title
+        </label>
+        <input type="text" id="title" name='title' placeholder='Title' className="px-4 py-2 border border-gray-400 rounded-md w-1/2" />
+      </div>
   
-        </div>
+      <div className="flex flex-col">
+        <label htmlFor="description" className="mb-2 font-bold text-gray-700">
+          Blog description
+        </label>
+        <textarea id="description" name='description' placeholder='Descripton' className="px-4 py-2 border border-gray-400 rounded-md w-1/2" />
+      </div>
   
-        <div>
-          <label htmlFor="description">
-            Blog description
-          </label>
-          <textarea id="description" name='description' placeholder='Descripton' />
+      <div className="flex flex-col">
+        <label htmlFor="body" className="mb-2 font-bold text-gray-700">
+          Blog Body
+        </label>
+        <textarea id="body" name='body' placeholder='Blog post body, separated by commas' className="px-4 py-2 border border-gray-400 rounded-md w-1/2" />
+      </div>
   
-        </div>
+      <button type="submit" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded w-1/12">
+        Post blog
+      </button>
+    </form >
+  </>
   
-        <div>
-          <label htmlFor="body">
-            Blog Body
-          </label>
-          <textarea id="body" name='body' placeholder='Blog post body, separated by commas' />
-  
-        </div>
-        <input type="submit" value="post blog " />
-      </form >
-    </>
   }
