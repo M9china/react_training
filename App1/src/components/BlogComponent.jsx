@@ -8,17 +8,14 @@ export const blogPosts = [
     date: "2023-05-05",
     image: "https://i.pinimg.com/564x/90/c1/ca/90c1ca3f7cd58fb3e04422542b40a2a4.jpg",
     body: [
-      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
-      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
+      , `Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
       Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
     ]
   },
   {
     id: 2,
     body: [
-      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
-      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
-      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+      , `A software engineer's day is dynamic, involving planning and communication, coding and testing, collaboration, learning and growth, breaks and self-care, as well as documentation and maintenance. It is a constantly evolving field with opportunities for creativity and innovation, and demands strong collaboration, problem-solving and technical skills. Pursuing a career in software engineering can be rewarding and exciting for those passionate about the field.`
     ],
     title: "The Day-to-Day Life of a Software Engineer",
     description:
@@ -29,9 +26,7 @@ export const blogPosts = [
   {
     id: 3,
     body: [
-      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
-      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
-      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+      , `Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility. Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
     ],
     title: "Challenges and Opportunities in Software Engineering",
     description:
@@ -42,9 +37,8 @@ export const blogPosts = [
   {
     id: 4,
     body: [
-      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
-      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
-      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+      , `
+      To advance your career in software engineering, it's essential to continuously improve your skills, specialize in a niche, network with others in the industry, seek feedback, take on new challenges, consider further education, and develop soft skills such as communication and leadership. By being proactive and strategic in your career development, you can achieve your goals and make meaningful contributions to the field.`
     ],
     title: "Advancing Your Career in Software Engineering",
     description:
@@ -55,9 +49,7 @@ export const blogPosts = [
   {
     id: 5,
     body: [
-      "This blog post explores the challenges and opportunities that software engineers face in their careers, including the rapid pace of technological change and the need to continuously learn and adapt."
-      ,`Software engineering presents challenges like keeping up with technology, meeting deadlines, effective communication, and debugging, but also provides opportunities like innovation, collaboration, career advancement, and flexibility.
-      Software engineers need to stay updated, manage their time, communicate effectively, and troubleshoot efficiently. The field offers endless opportunities to create new and exciting software solutions, work with other professionals, advance in one's career, and have flexibility in work arrangements.`
+      , `Maintaining a healthy work-life balance is essential for avoiding burnout and achieving long-term success in the demanding field of software engineering. Prioritizing tasks, setting realistic goals, learning to say no, disconnecting after work, focusing on health, getting organized, and seeking support are all important tips for achieving balance. By taking a proactive approach and implementing these strategies, software engineers can thrive both personally and professionally.`
     ],
     title: "Balancing Work and Life as a Software Engineer",
     description:
@@ -65,31 +57,39 @@ export const blogPosts = [
     date: "2023-05-05",
     image: "https://i.pinimg.com/564x/9a/df/69/9adf69928709f2ca1f5c211b113759ab.jpg",
   },
-]; 
+];
 
 export const DisplayBlog = ({ id, title, description, date, image }) => {
   return (
-    <div className="myCompCont">
-          <Link to={`/blogs/${id}`} className="cover">
-      <h1>{title}</h1>
-      <p >{description}</p>
-      <img src={image} alt={title} />
-      <p >{date}</p>
-    </Link>
-    </div>
+    <div>
+      <div className="flex flex-col">
+        <Link to={`/blogs/${id}`}>
+          <div className="mb-2">
+          <img className="h-32 w-32 place-content-center  flex-shrink-0" src={image} alt={title} />
+          </div>
+          <div>
+          <h1 className="text-xl justify-self-center">{title}</h1>
+          </div>
+          {/* <p>{description}</p>
+          <p>{date}</p> */}
 
+          
+
+        </Link>
+      </div>
+    </div>
   );
 };
 
 export const BlogComponent = () => {
   const { id } = useParams();
   return (
-    <div className="blog-container">
+    <div>
       {!id ? (
         <>
-          <div className="blog-posts">
+          <div className="flex flex-row items-center mr-4">
             {blogPosts.map((blog) => (
-              <div key={blog.id}>
+              <div key={blog.id} className=" mt-5 mb-5 w-30 h-84 mr-4">
                 {DisplayBlog({ ...blog, key: blog.id })}
               </div>
             ))}

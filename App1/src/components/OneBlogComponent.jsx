@@ -5,11 +5,11 @@ export const OneBlogComponent = () => {
   const { id } = useParams();
   const blogPost = blogPosts.find((blog) => blog.id === parseInt(id));
   return (
-    <div className="myCompCont">
-    <div className="cover">
+    <div >
+    <div >
         <div>
-          <img src={blogPost.image} alt="Blog post cover" />
-          <h1>{blogPost.title}</h1>
+        <h1 className="text-2xl">{blogPost.title}</h1>
+          <img className='w-21 h-20 object-cover rounded-lg' src={blogPost.image} alt="Blog post cover" />
           <p>{blogPost.description}</p>
           {
             blogPost.body.map(detailedDesc=> {
