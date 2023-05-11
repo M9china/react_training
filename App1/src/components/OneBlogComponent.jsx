@@ -10,10 +10,9 @@ export const OneBlogComponent = () => {
         <div>
           <h1 className="text-2xl">{blogPost.title}</h1>
           <img className='w-21 h-20 object-cover rounded-lg' src={blogPost.image} alt="Blog post cover" />
-          <p>{blogPost.description}</p>
           {
             blogPost.body.map(detailedDesc => {
-              return <p key={blogPost.id}>{detailedDesc}</p>
+              return <p className="border-l-2 border-r-2 border-t-2 border-b-2 ml-10 border-gray-300 h-64 pl-4 flex flex-col justify-between" key={blogPost.id}>{detailedDesc}</p>
             })
           }
         </div>
