@@ -23,7 +23,7 @@ export const AddBlogComponent = () => {
     console.log(postData);
   }
     return <>
-    <form className="flex flex-col space-y-4 p-6" onChange={handlChange} onSubmit={postBlog}>
+    <form className="flex flex-col space-y-4 p-6 relative" onChange={handlChange} onSubmit={postBlog}>
       <div className="flex flex-col">
         <label htmlFor="title" className="mb-2 font-bold text-gray-700">
           Blog title
@@ -45,7 +45,7 @@ export const AddBlogComponent = () => {
         <textarea id="body" name='body' placeholder='Blog post body, separated by commas' className="px-4 py-2 border border-gray-400 rounded-md w-1/2" />
       </div>
   
-      <button type="submit" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded w-1/12">
+      <button type="submit" className="bg-slate-700 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded w-1/12">
         Post blog
       </button>
     </form >

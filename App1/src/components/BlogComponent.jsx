@@ -66,11 +66,11 @@ export const DisplayBlog = ({ id, title, description, date, image }) => {
       <Link to={`/blogs/${id}`} className="flex">
         <h1 className="text-xl flex flex-row-center">{title}</h1>
         <img className="h-64 w-64 object-cover rounded-md" src={image} alt={title} />
-        <div className="border-l-2 border-r-2 border-t-2 border-b-2 ml-10 border-gray-300 h-64 pl-4 flex flex-col justify-between">
+        <div className="border-l-2 border-r-2 border-t-2 border-b-2 ml-10 border-gray-300 h-64 pl-4 flex flex-col justify-between w-34">
           <p className="bg-gray-800 text-white px-2 py-1 text-sm self-end">{date}</p>
           <div className="h-full flex-grow flex flex-col justify-between">
-            <div className="mt-2">
-              <p className="h-full">{description}</p>
+            <div className="mt-2"> 
+              <p className="h-full md:my-10">{description}</p>
             </div>
           </div>
         </div>
