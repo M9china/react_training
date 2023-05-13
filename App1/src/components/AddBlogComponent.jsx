@@ -23,7 +23,7 @@ export const AddBlogComponent = () => {
     console.log(postData);
   }
     return <>
-    <form className="flex flex-col space-y-4 p-6 relative" onChange={handlChange} onSubmit={postBlog}>
+    <form className="flex flex-col space-y-4 p-6 " onChange={handlChange} onSubmit={postBlog}>
       <div className="flex flex-col">
         <label htmlFor="title" className="mb-2 font-bold text-gray-700">
           Blog title
