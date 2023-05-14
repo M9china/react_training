@@ -1,8 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, onSnapshot } from 'firebase/firestore';
+import { getFirestore} from 'firebase/firestore';
 
 const firebaseConfig = {
-  // your firebase config object
   apiKey: "AIzaSyBXQFye-zBgjbqCquuUK6IRPOZh6tL-Sps",
   authDomain: "mywebapp-c9c07.firebaseapp.com",
   projectId: "mywebapp-c9c07",
@@ -13,4 +12,3 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-
