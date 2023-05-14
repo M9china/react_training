@@ -1,4 +1,6 @@
+import { addDoc, collection } from "@firebase/firestore"
 import { useState } from "react"
+
 export const AddBlogComponent = () => {
     const [postData, setPostData] = useState({
       title: "",
@@ -9,7 +11,7 @@ export const AddBlogComponent = () => {
     const formatText = (text)=>{
       return text.split("\n")
     }
-  const handlChange = (event) => {
+  const handlChange = async (event) => {
     event.preventDefault();
     const { name, value } = event.target;
     // console.log(name, value);

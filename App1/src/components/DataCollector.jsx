@@ -38,7 +38,7 @@ export const DataCollector = () => {
     });
     return () => unsubscribe();
   }, [db]);
-  console.log(userDataList)
+  // console.log(userDataList)
 
   return <>
 

@@ -62,15 +62,14 @@ export const blogPosts = [
 export const DisplayBlog = ({ id, title, description, date, image }) => {
   return (
     <>
-
       <div className="flex flex-col center mb-20 ml-40">
         <Link to={`/blogs/${id}`} className="flex">
           <img className="h-64 w-64 object-cover rounded-md" src={image} alt={title} />
           <div className="border-l-2 border-r-2 border-t-2 border-b-2 ml-10 border-gray-300 h-64 pl-4 flex flex-col justify-between w-96 overflow-hidden">
             <p className="bg-gray-700 text-white px-2 py-1 text-sm self-end">{date}</p>
             <div className="h-full flex-grow flex flex-col justify-between">
-              <h1 className="text-xl mx-auto mb-2 justify-center bold">{title}</h1>
-              <p className="h-full md:my-4 justify-center">{description}</p>
+              <h1 className="text-xl mx-auto mb-2 justify-center bold font-bold">{title}</h1>
+              <p className="h-full md:my-4 justify-center font-sans pr-2">{description}</p>
             </div>
           </div>
         </Link>
@@ -86,6 +85,8 @@ export const BlogComponent = () => {
     <div>
       {!id ? (
         <>
+            <h1 className="font-bold text-2xl mt-10 mb-10 ml-10 font-sans">Software Engineering Journey</h1>
+
           <div className="ml-4">
             {blogPosts.map((blog) => (
               <div key={blog.id} className=" mt-5 mb-5 w-30 h-84 mr-4">
