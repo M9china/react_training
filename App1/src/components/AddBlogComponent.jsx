@@ -1,5 +1,5 @@
-import { addDoc, collection } from "@firebase/firestore"
 import { useState } from "react"
+import { db } from '../firebaseConfig';
 
 export const AddBlogComponent = () => {
     const [postData, setPostData] = useState({
@@ -14,12 +14,25 @@ export const AddBlogComponent = () => {
   const handlChange = async (event) => {
     event.preventDefault();
     const { name, value } = event.target;
+    const docRef = await db.collection("blogs").add(postData);
+
     // console.log(name, value);
     setPostData({
       ...postData,
         [name]: name==="body"? formatText(value): value
       })
   }
+  // const postBlog = async (event) => {
+  //   event.preventDefault();
+  
+  //   try {
+  //     const docRef = await db.collection("blogs").add(postData);
+  //     console.log("Blog post added with ID: ", docRef.id);
+  //   } catch (error) {
+  //     console.error("Error adding blog post: ", error);
+  //   }
+  // };
+  
   const postBlog = (event) => {
     event.preventDefault();
     console.log(postData);

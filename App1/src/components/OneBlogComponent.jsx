@@ -6,7 +6,7 @@ export const OneBlogComponent = () => {
   const blogPost = blogPosts.find((blog) => blog.id === parseInt(id));
   return (
     < >
-      <h1 className="text-xl mx-auto mb-10 mt-5 ml-10 font-bold">{blogPost.title}</h1>
+      <h1 className="text-xl mx-auto mb-10 mt-10 ml-10 font-bold">{blogPost.title}</h1>
 
       <div className="flex flex-col center mb-20 ml-10" >
         <div className="flex">

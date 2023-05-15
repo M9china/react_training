@@ -85,7 +85,7 @@ export const BlogComponent = () => {
     <div>
       {!id ? (
         <>
-            <h1 className="font-bold text-2xl mt-10 mb-10 ml-10 font-sans">Software Engineering Journey</h1>
+          <h1 className="font-bold text-2xl mt-10 mb-10 ml-10 font-sans">Software Engineering Journey</h1>
 
           <div className="ml-4">
             {blogPosts.map((blog) => (
