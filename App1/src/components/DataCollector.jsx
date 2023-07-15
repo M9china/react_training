@@ -44,7 +44,7 @@ export const DataCollector = () => {
 
     <div className='p-6 rounded-md'>
       <Link to={`/account`}></Link>
-      <form onChange={DataCollector} onSubmit={handleFormSubmit}>
+      <form onChange={DataCollector}>
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
             Name
@@ -76,7 +76,7 @@ export const DataCollector = () => {
           <input type="text" name="address" id="address" placeholder='Enter your address' required className="appearance-none border rounded-md w-1/2 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" />
         </div>
         <div className="mb-4">
-          <button type="submit" className="bg-slate-700 hover:bg-gray-700 text-white font-bold py-2 px-4  rounded-full focus:outline-none focus:shadow-outline">Submit</button>
+          <button onSubmit={handleFormSubmit} type="submit" className="bg-slate-700 hover:bg-gray-700 text-white font-bold py-2 px-4  rounded-full focus:outline-none focus:shadow-outline">Submit</button>
         </div>
       </form>
     </div>
